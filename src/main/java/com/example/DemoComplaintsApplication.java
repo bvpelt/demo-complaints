@@ -124,7 +124,7 @@ public class DemoComplaintsApplication {
 
         @Bean
         public Queue queue() {
-		    return QueueBuilder.durable("CompliantEvents").build();
+		    return QueueBuilder.durable("ComplaintEvents").build();
         }
 
         @Bean
