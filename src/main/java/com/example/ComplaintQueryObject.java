@@ -8,6 +8,7 @@ import javax.persistence.Id;
  */
 @Entity
 public class ComplaintQueryObject {
+
     @Id
     private String complaintId;
     private String company;
@@ -20,7 +21,6 @@ public class ComplaintQueryObject {
     }
 
     public ComplaintQueryObject() {
-
     }
 
     public String getComplaintId() {

@@ -4,9 +4,9 @@ package com.example;
  * Created by bvpelt on 1/28/17.
  */
 public class ComplaintFileEvent {
-    private static String id;
-    private static String company;
-    private static String description;
+    private final String id;
+    private final String company;
+    private final String description;
 
     public ComplaintFileEvent(String id, String company, String description) {
         this.id = id;
@@ -14,15 +14,15 @@ public class ComplaintFileEvent {
         this.description = description;
     }
 
-    public static String getId() {
+    public String getId() {
         return id;
     }
 
-    public static String getCompany() {
+    public String getCompany() {
         return company;
     }
 
-    public static String getDescription() {
+    public String getDescription() {
         return description;
     }
 }

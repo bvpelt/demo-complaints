@@ -1,10 +1,9 @@
 # Testing
 
-
 After build
 * send complaint using 
 ```bash
-curl -H "Content-type: application/json" -d '{"company": "apple", "description": "my escape key is missing. Please send me one"}' localhost:8080
+curl -H "Content-type: application/json" -d '{"company": "apple", "description": "my escape key is missing. Please send me one"}' localhost:8080/complaints
 ```
 response
 ```bash
@@ -33,7 +32,7 @@ this shows only one entry:
 
 Add another complaint:
 ```bash
-curl -H "Content-type: application/json" -d '{"company": "microsoft", "description": "Bash does not always work nicely"}' localhost:8080
+curl -H "Content-type: application/json" -d '{"company": "microsoft", "description": "Bash does not always work nicely"}' localhost:8080/complaints
 ff92a564-1ad1-4afc-8fa3-0319ad52e7e5
 ```
 response
