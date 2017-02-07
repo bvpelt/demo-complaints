@@ -1,4 +1,4 @@
-package com.example;
+package nl.bsoft.events;
 
 /**
  * Created by bvpelt on 1/28/17.
