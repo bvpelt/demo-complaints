@@ -1,58 +1,17 @@
 # Testing
 
-After build
-* send complaint using 
-```bash
-curl -H "Content-type: application/json" -d '{"company": "apple", "description": "my escape key is missing. Please send me one"}' localhost:8080/complaints
+## Building
 ```
-response
-```bash
-283aa9b2-5d7c-439f-8bac-77e021c7db13
+mvn package
 ```
-To check the result open a browser at [http://localhost:8080](http://localhost:8080)
-this shows:
-```json
-[
-    {
-        "complaintId": "283aa9b2-5d7c-439f-8bac-77e021c7db13",
-        "company": "apple",
-        "description": "my escape key is missing. Please send me one"
-    }
-]
+## Start service
 ```
-Or just find one by going to [http://localhost:8080/283aa9b2-5d7c-439f-8bac-77e021c7db13](http://localhost:8080/283aa9b2-5d7c-439f-8bac-77e021c7db13)
-this shows only one entry:
-```json
-{
-    "complaintId": "283aa9b2-5d7c-439f-8bac-77e021c7db13",
-    "company": "apple",
-    "description": "my escape key is missing. Please send me one"
-}
+mvn spring-boot:run
 ```
+This starts the server side
 
-Add another complaint:
-```bash
-curl -H "Content-type: application/json" -d '{"company": "microsoft", "description": "Bash does not always work nicely"}' localhost:8080/complaints
-ff92a564-1ad1-4afc-8fa3-0319ad52e7e5
+To enter a complaint with curl
+``` 
+curl -H "Content-type: application/json" -d '{"company": "linux", "description": "Bash does not always work nicely"}' localhost:8080/complaints
 ```
-response
-```
-ff92a564-1ad1-4afc-8fa3-0319ad52e7e5
-```
-The browser at [http://localhost:8080](http://localhost:8080) shows:
-```json
-[
-
-    {
-        "complaintId": "283aa9b2-5d7c-439f-8bac-77e021c7db13",
-        "company": "apple",
-        "description": "my escape key is missing. Please send me one"
-    },
-    {
-        "complaintId": "ff92a564-1ad1-4afc-8fa3-0319ad52e7e5",
-        "company": "microsoft",
-        "description": "Bash does not always work nicely"
-    }
-
-]
-```
+This posts an event on the event message bus.
