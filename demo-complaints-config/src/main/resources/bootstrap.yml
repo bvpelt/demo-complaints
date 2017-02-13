@@ -1,0 +1,12 @@
+debug: false
+
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://home/bvpelt/Develop/demo-complaints/demo-complaints-config/data
+server:
+  port: 8888
