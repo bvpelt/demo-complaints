@@ -3,12 +3,13 @@ package nl.bsoft.prefilter;
 /**
  * Created by bvpelt on 2/14/17.
  */
+
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
-        import org.slf4j.Logger;
-        import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-        import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by ben on 29/06/16.

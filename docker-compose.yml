@@ -32,3 +32,14 @@ services:
     depends_on:
      - discovery
      - config
+  command:
+    image: dockerpinguin/demo-complaints-command
+    container_name: command
+    depends_on:
+     - rabbitmq
+     - discovery
+     - config
+    ports:
+      - "9000"
+    environment:
+     - SPRING_PROFILES_ACTIVE=production

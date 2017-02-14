@@ -1,4 +1,4 @@
-message: Greetings from the COMPLAINT-COMMAND-SIDE microservice [using the LOCALHOST config].
+message: Greetings from the command microservice [using the LOCALHOST config].
 
 #debug: true
 eureka:
@@ -34,4 +34,4 @@ logging:
             #transaction: DEBUG
         org.axonframework: INFO
         nl.bsoft: DEBUG
-    file: ./build/logs/complaint-side-server.log
+file: ./build/logs/command-side-server.log

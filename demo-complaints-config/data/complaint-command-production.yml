@@ -33,5 +33,5 @@ logging:
             #data: DEBUG
             #transaction: DEBUG
         org.axonframework: INFO
-        nl.bsoft: INFO
+        nl.bsoft: DEBUG
      file: ./logs/command-side-server.log

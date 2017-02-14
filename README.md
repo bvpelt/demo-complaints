@@ -47,3 +47,23 @@ $ mvn clean package docker:build
 ``` 
 $ docker-compose up &
 ```
+## Git
+Checkout the project
+```
+git clone [-b develop] https://github.com/bvpelt/demo-complaints.git
+```
+
+### Making a release
+This is done in two fases
+* add a tag (version number)
+* push the tags
+Default one works in the development branch. It the work is done commit the work, push from develop to remote. Checkout the master, merge with develop, tag the version and push the tags. The following commands are needed
+```
+git add .
+git commit -m "Ready with work"
+git push
+git checkout master
+git merge develop
+git tag -a v1.2 -m "Version 1.2"
+git push --tags
+```

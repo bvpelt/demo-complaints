@@ -43,7 +43,8 @@
     <modules>
         <module>demo-complaints-config</module>
         <module>demo-complaints-discovery</module>
-	<module>demo-complaints-gateway</module>
+	    <module>demo-complaints-gateway</module>
+        <module>demo-complaints-command</module>
     </modules>
 
     <dependencyManagement>
@@ -104,9 +105,9 @@
                         <entryPoint>["java","-Djava.security.egd=file:/dev/./urandom","-jar","/${project.build.finalName}.jar"]</entryPoint>
                         <serverId>docker-hub</serverId>
                         <skipDockerBuild>true</skipDockerBuild>
-                        <!--
+<!--
                         <dockerDirectory>${project.basedir}/docker</dockerDirectory>
-                        -->
+-->
                         <resources>
                             <!-- copy the service's jar file from target into the root directory of the image -->
                             <resource>
@@ -134,6 +135,7 @@
                         </imageTags>
                     </configuration>
                     <executions>
+                        <!--
                         <execution>
                             <id>build-image</id>
                             <phase>package</phase>
@@ -165,6 +167,10 @@
                                 <pushImage>true</pushImage>
                             </configuration>
                         </execution>
+                        -->
+                        <execution>
+                            <id>docker</id>
+                            <phase>none</phase></execution>
                     </executions>
                 </plugin>
             </plugins>
