@@ -1,6 +1,11 @@
 version: '2.1'
 
 services:
+  mongodb:
+    image: mongo:2.4
+    container_name: mongodb
+    ports:
+     - "27017:27017"
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
